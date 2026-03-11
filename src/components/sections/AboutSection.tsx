@@ -36,6 +36,9 @@ export default function AboutSection() {
               <br />
               <span className="text-terminal-gray">{e.institution}</span>
               <span className="text-terminal-gray"> · {e.year}</span>
+              {'cgpa' in e && e.cgpa && (
+                <span className="text-terminal-cyan text-xs block">CGPA: {e.cgpa}</span>
+              )}
             </li>
           ))}
         </ul>

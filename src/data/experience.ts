@@ -8,24 +8,10 @@ export interface Experience {
 
 export const EXPERIENCE: Experience[] = [
   {
-    role: 'Research Intern',
-    company: 'Lab / Company Name',
-    period: '2024 – Present',
-    description: ['ML model development', 'Paper implementation', 'Dataset curation'],
-    tech: ['PyTorch', 'Python', 'Git'],
-  },
-  {
-    role: 'Software Developer Intern',
-    company: 'Tech Company',
-    period: 'Summer 2023',
-    description: ['Full-stack features', 'API design', 'Code reviews'],
+    role: 'Web Development Intern',
+    company: 'Oasis infobyte',
+    period: '2023 – 2023',
+    description: ['Developed a responsive and user-friendly website for a client using React and Node.js.'],
     tech: ['React', 'Node.js', 'PostgreSQL'],
-  },
-  {
-    role: 'Teaching Assistant',
-    company: 'SSN College of Engineering',
-    period: '2023 – 2024',
-    description: ['Data Structures', 'Algorithms', 'Lab sessions'],
-    tech: ['C++', 'Python'],
   },
 ];

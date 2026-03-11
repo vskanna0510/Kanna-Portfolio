@@ -1,6 +1,6 @@
 export const PROFILE = {
   name: 'V S Kanna',
-  title: 'Postgraduate | AI, Cybersecurity & Full-Stack',
+  title: 'Postgraduate | AI & ML, Cybersecurity & Full-Stack',
   institution: 'SSN College of Engineering',
   tagline: 'Building intelligent systems & securing the digital world',
   avatar: '/avatar.png',
@@ -9,19 +9,30 @@ export const PROFILE = {
   github: 'https://github.com/vskanna0510',
   linkedin: 'https://linkedin.com/in/v-s-kanna-4ab982249',
   twitter: 'https://twitter.com/yourusername',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/Kanna_FS_CV.pdf',
 };
 
 export const ABOUT = {
-  intro: `I'm a Postgraduate student in Computer Science at SSN College of Engineering, specializing in Artificial Intelligence, Cybersecurity, Machine Learning, and Full-Stack Development.`,
+  intro: `I'm a Postgraduate student in Computer Science at SSN College of Engineering, specializing in Full Stack Web Development, Artificial Intelligence, Cybersecurity, and Machine Learning.`,
   highlights: [
-    'Research in ML/AI and security',
-    'Full-stack development (Next.js, React, Node)',
+    'Research in AI & ML and security',
+    'Full-stack development (Next.js, React, Node, Flask)',
     'Cybersecurity tools & vulnerability analysis',
     'Deep learning & neural networks',
+    'Mobile App Development',
   ],
   education: [
-    { degree: 'M.Tech / M.S. Computer Science', institution: 'SSN College of Engineering', year: '2023 – Present' },
-    { degree: 'B.Tech Computer Science', institution: 'Previous Institution', year: '2019 – 2023' },
+    {
+      degree: 'M.E Computer Science',
+      institution: 'SSN College of Engineering',
+      year: '2025 – 2027',
+      cgpa: '8.67',
+    },
+    {
+      degree: 'B.Tech Information Technology',
+      institution: 'Chennai Institute of Technology',
+      year: '2021 – 2025',
+      cgpa: '9.09',
+    },
   ],
 };

@@ -1,1 +1,0 @@
-Add `resume.pdf` to the `public/` folder. The Resume section links to `/resume.pdf`.

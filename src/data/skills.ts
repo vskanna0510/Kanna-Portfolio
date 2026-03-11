@@ -11,8 +11,8 @@ export const SKILLS: Skill[] = [
   { name: 'PyTorch / TensorFlow', level: 4, category: 'ai-ml' },
   { name: 'Node.js', level: 4, category: 'framework' },
   { name: 'Cybersecurity', level: 4, category: 'security' },
-  { name: 'Docker / K8s', level: 4, category: 'devops' },
+  { name: 'Docker', level: 3, category: 'devops' },
   { name: 'SQL / NoSQL', level: 4, category: 'tool' },
-  { name: 'Linux / Bash', level: 5, category: 'tool' },
+  { name: 'Linux / Bash', level: 4, category: 'tool' },
   { name: 'Git', level: 5, category: 'tool' },
 ];

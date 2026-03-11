@@ -7,13 +7,13 @@ export interface Project {
   github?: string;
   demo?: string;
   image?: string;
-  category: 'ai-ml' | 'cybersecurity' | 'fullstack' | 'research' | 'other';
+  category: 'ai-ml' | 'cybersecurity' | 'fullstack' | 'research' | 'other' | 'MobileApp' | 'ai-nlp';
 }
 
 export const PROJECTS: Project[] = [
   {
     id: 'moodapp',
-    title: 'ML-Powered Fraud Detection',
+    title: 'MoodMap - Adaptive Background Music Generator',
     problem: 'Modern work and study environments often have inconsistent background noise (office chatter, traffic, sudden silence, or random disturbances). These unpredictable sound patterns can break concentration, increase cognitive load, and reduce productivity. Existing solutions like white noise apps or Lo-Fi playlists are static, meaning they do not adapt to the real-time acoustic environment around the user.',
     solution: 'MoodMap solves this by using the device microphone to analyze the surrounding sound environment and automatically generating a dynamic Lo-Fi soundscape that complements the existing audio profile. By recording a short ambient clip and performing frequency analysis, the system detects the room’s sound characteristics and assigns a mood profile (e.g., Warm & Deep, Balanced, Bright & Airy). It then procedurally generates adaptive background music that fills acoustic gaps, creating a more stable and focus-friendly auditory environment.',
     techStack: ['React Native', 'Android AudioRecord API', 'Python', 'Librosa', 'TensorFlow', 'FFT', 'Tone.js', 'Superpowered SDK', 'FastAPI', 'WebSockets', 'PostgreSQL', 'Docker', 'AWS'],
@@ -34,27 +34,18 @@ export const PROJECTS: Project[] = [
     title: 'My personal Portfolio',
     problem: 'Recruiters often spend only a few seconds reviewing portfolios, making it difficult for students to effectively demonstrate their skills, creativity, and project experience.',
     solution: 'Develop an interactive developer portfolio that combines a terminal-style interface, 3D visualizations, and gamified exploration to create an engaging user experience. The platform allows visitors and recruiters to explore projects, skills, and research through commands, interactive elements, and immersive design, making the portfolio both memorable and informative.',
-    techStack: ['Next.js', 'React', 'Tailwind CSS', 'Three.js', 'React Three Fiber', 'Framer Motion', 'TypeScript', 'Node.js', 'Express.js', 'WebGL', 'GitHub API', 'Vercel'],
-    github: 'https://github.com',
-    demo: 'https://huggingface.co',
-    category: 'ai-ml',
-  },
-  {
-    id: 'dev-portal',
-    title: 'Developer Portal',
-    problem: 'Internal docs and API playground for engineering teams.',
-    solution: 'Next.js app with interactive API docs, auth, and live demos.',
-    techStack: ['Next.js', 'TypeScript', 'Tailwind', 'tRPC'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    techStack: ['Next.js', 'React', 'Tailwind CSS', 'Three.js', 'React Three Fiber', 'Framer Motion', 'TypeScript', 'Node.js', 'Express.js', 'WebGL', 'GitHub API', 'Vercel', 'Docker'],
+    github: 'https://github.com/vskanna0510/Kanna-Portfolio',
     category: 'fullstack',
   },
   {
-    id: 'research-nlp',
-    title: 'NLP Research Prototype',
-    problem: 'Domain-specific entity recognition and relation extraction.',
-    solution: 'Transformer-based NER with custom tokenization and evaluation pipeline.',
-    techStack: ['PyTorch', 'Hugging Face', 'spaCy', 'Python'],
-    category: 'research',
+    id: 'krk',
+    title: 'KRK Notes Maker - Online Live Videos Note Maker',
+    problem: 'Students and professionals often watch long online lectures or live videos, but taking notes while watching is difficult and time-consuming. Important information may be missed, and revisiting long videos to find key points becomes inefficient.',
+    solution: 'Develop an Online Live Videos Note Maker that allows users to capture, organize, and store important notes while watching live or recorded videos. The system helps users quickly extract key information, create structured notes, and revisit important moments without rewatching the entire video.',
+    techStack: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    github: 'https://github.com/vskanna0510/Online-Live-Videos-Note-Maker',
+    demo: 'https://krk-notes-maker.vercel.app/',
+    category: 'fullstack',
   },
 ];
