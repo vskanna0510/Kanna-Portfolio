@@ -7,7 +7,6 @@ import ProjectsSection from './ProjectsSection';
 import SkillsSection from './SkillsSection';
 import ExperienceSection from './ExperienceSection';
 import ContactSection from './ContactSection';
-import BlogSection from './BlogSection';
 import PlaySection from './PlaySection';
 import ResumeSection from './ResumeSection';
 
@@ -17,7 +16,6 @@ const SECTION_MAP: Record<string, React.ComponentType> = {
   skills: SkillsSection,
   experience: ExperienceSection,
   contact: ContactSection,
-  blog: BlogSection,
   play: PlaySection,
   resume: ResumeSection,
 };

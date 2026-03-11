@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useTerminal } from '@/context/TerminalContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Terminal, User, FolderOpen, Wrench, Briefcase, Download, Mail, BookOpen, Gamepad2, Box } from 'lucide-react';
+import { Menu, X, Terminal, User, FolderOpen, Wrench, Briefcase, Download, Mail, Gamepad2, Box } from 'lucide-react';
 
 const NAV_ITEMS: { id: string | null; label: string; icon: React.ElementType }[] = [
   { id: null, label: 'Home', icon: Terminal },
@@ -13,7 +13,6 @@ const NAV_ITEMS: { id: string | null; label: string; icon: React.ElementType }[]
   { id: 'experience', label: 'Experience', icon: Briefcase },
   { id: 'resume', label: 'Resume', icon: Download },
   { id: 'contact', label: 'Contact', icon: Mail },
-  { id: 'blog', label: 'Blog', icon: BookOpen },
   { id: 'play', label: 'Play', icon: Gamepad2 },
   { id: 'explore', label: 'Explore 3D', icon: Box },
 ];

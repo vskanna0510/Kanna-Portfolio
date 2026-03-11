@@ -85,7 +85,6 @@ export function TerminalProvider({ children }: { children: React.ReactNode }) {
           experience: 'Loading Experience...',
           resume: 'Preparing resume download...',
           contact: 'Opening Contact...',
-          blog: 'Loading Blog...',
           play: 'Loading Games...',
           explore: 'Entering 3D Experience...',
           matrix: 'Access granted. Initiating...',

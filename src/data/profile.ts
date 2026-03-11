@@ -17,8 +17,8 @@ export const ABOUT = {
   highlights: [
     'Research in AI & ML and security',
     'Full-stack development (Next.js, React, Node, Flask)',
-    'Cybersecurity tools & vulnerability analysis',
-    'Deep learning & neural networks',
+    'Cybersecurity tools',
+    'Deep learning - Image Classification, Object Detection, Semantic Segmentation, Image Generation',
     'Mobile App Development',
   ],
   education: [
