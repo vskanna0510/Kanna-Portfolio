@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --terminal-bg: #0d1117;
+  --terminal-green: #3fb950;
+  --terminal-cyan: #58a6ff;
+  --neon-green: #00ff88;
+  --neon-cyan: #00d4ff;
+  --glass-bg: rgba(13, 17, 23, 0.85);
+  --glass-border: rgba(63, 185, 80, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--terminal-bg);
+  color: var(--terminal-green);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--terminal-green);
+  border-radius: 4px;
+}
+
+/* Terminal cursor */
+.terminal-cursor::after {
+  content: '▋';
+  animation: cursor-blink 1s step-end infinite;
+  color: var(--terminal-green);
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Glassmorphism */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Glow effects */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.box-glow {
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+}
+
+/* Neural network grid background */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(63, 185, 80, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63, 185, 80, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
