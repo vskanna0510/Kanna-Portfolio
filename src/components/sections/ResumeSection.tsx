@@ -15,8 +15,7 @@ export default function ResumeSection() {
       </p>
       <motion.a
         href={PROFILE.resumeUrl}
-        download
-        target="_blank"
+        download="Kanna_FS_CV.pdf"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
