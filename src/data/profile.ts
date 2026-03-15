@@ -9,7 +9,7 @@ export const PROFILE = {
   github: 'https://github.com/vskanna0510',
   linkedin: 'https://linkedin.com/in/v-s-kanna-4ab982249',
   twitter: 'https://twitter.com/yourusername',
-  resumeUrl: '/api/resume',
+  resumeUrl: '/Kanna_FS_CV.pdf',
 };
 
 export const ABOUT = {
