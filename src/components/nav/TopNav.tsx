@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTerminal } from '@/context/TerminalContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Terminal, User, FolderOpen, Wrench, Briefcase, Download, Mail, Gamepad2, Box } from 'lucide-react';
+import { Menu, Moon, SunMedium, X, Terminal, User, FolderOpen, Wrench, Briefcase, Download, Mail, Gamepad2, Box } from 'lucide-react';
 
 const NAV_ITEMS: { id: string | null; label: string; icon: React.ElementType }[] = [
   { id: null, label: 'Home', icon: Terminal },
@@ -20,6 +20,26 @@ const NAV_ITEMS: { id: string | null; label: string; icon: React.ElementType }[]
 export default function TopNav() {
   const { currentSection, setCurrentSection } = useTerminal();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+
+  useEffect(() => {
+    const stored = typeof window !== 'undefined' ? (localStorage.getItem('theme') as 'dark' | 'light' | null) : null;
+    const initial = stored ?? 'dark';
+    setTheme(initial);
+    if (typeof document !== 'undefined') {
+      document.documentElement.dataset.theme = initial;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   const handleNav = (id: string | null) => {
     setCurrentSection(id);
@@ -41,7 +61,7 @@ export default function TopNav() {
             </button>
 
             {/* Desktop menu */}
-            <div className="hidden lg:flex items-center gap-0.5 overflow-x-auto max-w-[calc(100vw-12rem)]">
+            <div className="hidden lg:flex items-center gap-0.5 overflow-x-auto max-w-[calc(100vw-16rem)]">
               {NAV_ITEMS.map((item) => {
                 const Icon = item.icon;
                 const isActive = currentSection === item.id;
@@ -62,14 +82,34 @@ export default function TopNav() {
               })}
             </div>
 
-            {/* Mobile menu button */}
+            {/* Theme toggle (desktop) */}
             <button
-              onClick={() => setMobileOpen((o) => !o)}
-              className="lg:hidden p-2 rounded text-terminal-green hover:bg-terminal-green/10"
-              aria-label="Toggle menu"
+              type="button"
+              onClick={toggleTheme}
+              className="hidden lg:inline-flex items-center justify-center ml-2 w-9 h-9 rounded-full border border-terminal-green/40 text-terminal-green hover:bg-terminal-green/10"
+              aria-label="Toggle dark/light theme"
             >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+              {theme === 'dark' ? <SunMedium size={16} /> : <Moon size={16} />}
             </button>
+
+            {/* Mobile buttons */}
+            <div className="lg:hidden flex items-center gap-1">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="p-2 rounded text-terminal-green hover:bg-terminal-green/10"
+                aria-label="Toggle dark/light theme"
+              >
+                {theme === 'dark' ? <SunMedium size={18} /> : <Moon size={18} />}
+              </button>
+              <button
+                onClick={() => setMobileOpen((o) => !o)}
+                className="p-2 rounded text-terminal-green hover:bg-terminal-green/10"
+                aria-label="Toggle menu"
+              >
+                {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+              </button>
+            </div>
           </div>
         </div>
 

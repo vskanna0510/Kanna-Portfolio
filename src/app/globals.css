@@ -14,6 +14,16 @@
   --glass-border: rgba(63, 185, 80, 0.2);
 }
 
+[data-theme='light'] {
+  --terminal-bg: #f5f7fb;
+  --terminal-green: #14532d;
+  --terminal-cyan: #0369a1;
+  --neon-green: #059669;
+  --neon-cyan: #0284c7;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(148, 163, 184, 0.5);
+}
+
 * {
   box-sizing: border-box;
 }
